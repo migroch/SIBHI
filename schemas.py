@@ -476,6 +476,44 @@ resources_schema = [
   }
 ]
 
+rev_schema = [
+  {
+    "mode": "NULLABLE",
+    "name": "EntryID",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ResourceType",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "GradeLevels",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IntendedPurpose",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ResourceFormat",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "StudentPopulation",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "StaffedBy",
+    "type": "STRING"
+  }
+]
+
 inputs_schema = [
   {
     "mode": "NULLABLE",
