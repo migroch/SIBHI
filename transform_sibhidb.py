@@ -63,6 +63,7 @@ def en_mapper(field):
             if row[col] != 0 and row[col] != '0':
                 new_row = pd.DataFrame({'EntryID':[row['EntryID']],
                                         'ResourceType':[row['RscType']],
+                                        'UtzStudent':[row['UtzStdnt']],
                                         field:[col]})
                 temp_df = pd.concat([temp_df,new_row], ignore_index=True)
     return temp_df
@@ -73,7 +74,7 @@ for key in en_dict:
     if count == 0:
         rev_resources = new_df
     else:
-        rev_resources = pd.merge(rev_resources, new_df, on=['EntryID','ResourceType'], how='outer')
+        rev_resources = pd.merge(rev_resources, new_df, on=['EntryID','ResourceType','UtzStudent'], how='outer')
 
     count += 1
 
